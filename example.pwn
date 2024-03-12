@@ -11,16 +11,16 @@ Action:ActionInfernus(playerid, response)
 {
 	if (response == ACTION_RESPONSE_YES)
 	{
-		new Float:x, Float:y, Float:z, Float:ang;
+		new Float:x, Float:y, Float:z, Float:angz;
 
 		GetPlayerPos(playerid, x, y, z);
-		GetPlayerFacingAngle(playerid, ang);
+		GetPlayerFacingAngle(playerid, angz);
 
 		new vehicleid = CreateVehicle(411,
-			x + 2.5 * floatsin(-ang, degrees),
-			y + 2.5 * floatcos(-ang, degrees),
+			x + 2.5 * floatsin(-angz, degrees),
+			y + 2.5 * floatcos(-angz, degrees),
 			z + 0.3,
-			ang,
+			angz,
 			0,
 			0,
 			-1);
